@@ -1,0 +1,2 @@
+### Blog Application
+## In this application user can add blog and read the blog. User can add the blog by just clicking '+' sign and can read the blog by just Clicking Read Button where user can read detailed description of bolg

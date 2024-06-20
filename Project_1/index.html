@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog app</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="heading">
+        <h1>PWSkills Blog</h1>
+       <i class="fa-solid fa-plus" id="add-icon"></i>  
+    </div>
+
+    <!-- Blog Form -->
+
+   <div id="form-wrapper">
+    <div class="form-box">   
+        <form class="blog-form">
+            <i class="fa-solid fa-xmark" id="cross-icon"></i>
+            <input type="url" name="image-url" id="image-url" placeholder="Enter Post URL:" required/>
+            <input type="text" name="Blog-title" id="blog-title" placeholder="Enter Blog Title:" required/>
+            <input type="text" name="Blog-description" id="blog-description" placeholder="Enter Blog Description:" required/>
+        </form>
+        <textarea name="blog-textarea" id="blog-textarea" rows="10" cols="50" placeholder="Write..." required>
+        </textarea>
+        <button id="add-blog">Add Blog</button>
+    </div>
+   </div>
+   
+
+   <!-- To add Blog  -->
+    <div id="blog-wrapper">
+
+     <!-- Blog will render dynamically here -->
+
+       <!-- <div class="blog-box">
+        <div class="blog-image">
+            <img src="https://cdn.pixabay.com/photo/2023/06/23/08/51/lord-krishna-8083043_1280.png" alt="Image">
+        </div>
+
+        <div class="blog-content">
+           <h3>Blog Title:Demo Article</h3>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, animi quos.</p>
+        </div>
+
+        <a href="./readBlog.html" class = 'readBlog'>Read</a>
+       </div> -->
+
+    </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
