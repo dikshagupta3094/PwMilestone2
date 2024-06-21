@@ -91,7 +91,6 @@ function renderBlogFromLocalStorage(blog){
  img.setAttribute('src',postURL)
  img.setAttribute('alt','BloGImage')
  blogImage.appendChild(img)
- console.log(blogImage);
  blogImage.classList.add('blog-image')
  blogBox.appendChild(blogImage)
 

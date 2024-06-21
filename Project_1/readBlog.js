@@ -7,19 +7,58 @@ document.addEventListener('DOMContentLoaded',function(){
      const blog = blogs.find((blog)=>blog.id === id)
      
      if(blog){
-        const content = document.createElement('div')
-        
-        const title = document.createElement('h2')
-        title.textContent = blog.blogTitle
-        content.appendChild(title)
-        
+      
+      const readWrapper = document.getElementById('read-wrapper')
+      const readBlogDiv = document.createElement('div')
 
-        const Image = document.createElement('img')
-        const ImageURL = blog.postURL
-        Image.setAttribute('src',ImageURL)
-        content.appendChild(Image)
+      const contentOfInsideReadBlogDiv = document.createElement('div')
+ 
+      //Title
+      const title = document.createElement('h2')
+      title.textContent = blog.blogTitle
+      contentOfInsideReadBlogDiv.appendChild(title)
+      contentOfInsideReadBlogDiv.classList.add('content')
+      readBlogDiv.appendChild(contentOfInsideReadBlogDiv)
+      readBlogDiv.classList.add('read-Blog')
+     
+      //Description
 
-        document.body.appendChild(content)
+      const description = document.createElement('p')
+      description.textContent = blog.blogDescription
+      contentOfInsideReadBlogDiv.appendChild(description)
+      contentOfInsideReadBlogDiv.classList.add('content')
+      readBlogDiv.appendChild(contentOfInsideReadBlogDiv)
+      readBlogDiv.classList.add('read-Blog')
+    
+      //Image
+
+      const ImageDiv = document.createElement('div')
+      const img = document.createElement('img')
+      img.setAttribute('src',blog.postURL)
+      img.setAttribute('alt','blogImage')
+      img.setAttribute('height','220px')
+      img.setAttribute('width','280px')
+      ImageDiv.appendChild(img)
+      ImageDiv.classList.add('img-section')
+      readBlogDiv.appendChild(ImageDiv)
+      readBlogDiv.classList.add('read-Blog')
+      console.log(readBlogDiv);
+      
+      readWrapper.appendChild(readBlogDiv)
+
+      //Detailed description
+    const paraDiv = document.createElement('div')
+     const para = document.createElement('p')
+     para.textContent = blog.detailedBlogDescription
+     paraDiv.appendChild(para)
+     paraDiv.classList.add('text')
+     readWrapper.appendChild(paraDiv)
+      
+    console.log(readWrapper);
+
+    
+    
+      // 
      }
     }
 
